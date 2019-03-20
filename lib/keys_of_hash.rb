@@ -1,7 +1,9 @@
+require "pry"
 class Hash
   def keys_of(*arguments)
     array = []
       arguments.each do |x|
+        binding.pry
         self.each do |k, v|
           if v == x
             array << k
